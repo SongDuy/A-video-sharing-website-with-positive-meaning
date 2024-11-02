@@ -1,0 +1,68 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Xuất hiện từ trái sang phải cho menu */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.9s forwards;
+}
+
+/* Xuất hiện mục comment */
+.modal-comment {
+  display: none;
+}
+
+.custom-scrollbar {
+  overflow: auto;
+}
+
+.custom-scrollbar-content {
+  padding-right: 20px; /* Khoảng trống giữa nội dung và thanh cuộn */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 4px;
+}
+
+/* Căn giữa columns */
+.centered-header {
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+}
+
+.button-group > *:not(:last-child) {
+  margin-right: 20px; /* Thay đổi giá trị này để tăng hoặc giảm khoảng cách */
+}
